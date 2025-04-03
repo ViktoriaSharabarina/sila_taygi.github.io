@@ -1,0 +1,258 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: rgb(50, 50, 50);
+    display: grid;
+    flex-direction: column;
+    align-items: cr;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    background-color:#0072C8;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;             
+}
+
+.logo__st {
+    background: white;
+    margin-left: 110px;
+    position: relative;             
+}
+
+.logo__gaz {
+    background: white;
+    padding: 30px 0;
+    margin-right: 110px;
+    position: relative;
+}
+
+.logo__st img,
+.logo__gaz img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+.navigation {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(227, 230, 238);
+    color: rgb(50, 50, 50);
+    padding: 10px 20px;
+    border: 7px solid #6389D9;
+    border-radius: 40px;
+    box-shadow: 0 0 15px 5px rgb(242, 250, 255);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    width: 250px;
+    height: 60px;
+}
+
+.navigation__button:hover {
+    background: linear-gradient(130deg,#6389D9, #65AAD9);
+    border: 7px solid white;
+    border-radius: 40px;
+    color: white;
+}
+
+#about {
+    text-decoration: none !important;
+    color: white;
+}
+
+.description {
+    max-width: 800px; 
+    text-align: center; 
+    background: linear-gradient(130deg,#6389D9, #65AAD9); 
+    padding: 20px;
+    border-radius: 40px; 
+    box-shadow: 0 0 15px 10px #bed8f9; 
+    margin: 80px auto;
+    color: white;
+}
+
+.background-wrapper {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rgb(175, 175, 175);
+    background-image: url("photo/back.jpg");
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.team-member {
+    background-color: white;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 40px;
+    background: rgb(227, 230, 238);
+    transition: transform 0.3s ease;
+    border: 7px solid #6389D9;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    height: auto;
+    min-height: 670px;
+}
+
+.team-member:hover {
+    transform: translateY(-20px);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member__role {
+    padding: 0;
+    margin: 0;
+    color: rgb(50, 50, 50);
+}
+
+.tasks {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    min-height: 90px;
+}
+
+.tasks li {
+    padding: 5px 0;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    list-style-position: inside;
+    align-items: left;
+}
+
+.telegram-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #bed8f9;
+    color: rgb(50, 50, 50);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px grey;
+    width: 180px;
+}
+
+.telegram-button img {
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+
+.number img {
+    width: 20px;
+    height: 20px;
+    margin-top: 9px;
+}
+
+.telegram-button:hover,
+.number:hover {
+    background: linear-gradient(130deg,#6389D9, #65AAD9);
+    box-shadow: 0 6px 15px grey;
+    color: white;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    gap: 8px;
+    background-color: #bed8f9;
+    color: rgb(50, 50, 50);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px grey;
+    width: 180px;
+}
+
+.footer-container {
+    max-width: 1700px;
+    margin: 50px 50px;  
+}
+.photo-container {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+}   
+
+/* Адаптация для смартфонов */
+/*@media screen and (max-width: 768px) {
+    header, .description {
+        width: 100%;
+    }
+
+    .team {
+        flex-direction: column; /* Карточки в одну колонку */
+        /*align-items: center;
+    }
+
+    .team-member {
+        width: 90%; /* Растягиваем карточку почти на весь экран */
+    /*}
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+}*/
+
