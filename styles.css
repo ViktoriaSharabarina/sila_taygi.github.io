@@ -251,33 +251,6 @@ header {
     flex-shrink: 0;
 }   
 
-/* Адаптация для смартфонов */
-/*@media screen and (max-width: 768px) {
-    header, .description {
-        width: 100%;
-    }
-
-    .team {
-        flex-direction: column; /* Карточки в одну колонку */
-        /*align-items: center;
-    }
-
-    .team-member {
-        width: 90%; /* Растягиваем карточку почти на весь экран */
-    /*}
-
-    .logo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navigation {
-        position: static;
-        text-align: center;
-        margin-top: 10px;
-    }
-}*/
-
 /* Адаптация для мобильных */
 /*шапка*/
 @media (max-width: 768px) {
