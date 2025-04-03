@@ -4,53 +4,60 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: rgb(50, 50, 50);
-    display: grid;
+    display: flex;
     flex-direction: column;
-    align-items: cr;
+    align-items: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
+    background-color:#0072C8;
     width: 100%;
     max-width: 100%;
-    background-color:#0072C8;
+    position: relative;
     color: white;
 }
 
 .logo {
     display: flex;
     justify-content: space-between;
-    width: 100%;             
+    width: 100%;
+    height: 100%;          
 }
 
 .logo__st {
     background: white;
-    margin-left: 110px;
-    position: relative;             
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    box-sizing: border-box;
 }
 
 .logo__gaz {
     background: white;
+    display: flex;
+    align-items: center;
     padding: 30px 0;
-    margin-right: 110px;
-    position: relative;
+    margin-right: 50px;
 }
 
 .logo__st img,
-.logo__gaz img {
+.logo__gaz img{
+    height: 60px;
     max-width: 150px;
     height: auto;
+    object-fit: contain;
 }
 
 
 
 .navigation {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 48.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .navigation__button {
@@ -68,7 +75,7 @@ header {
     font-weight: bold;
     font-size: 30px;
     transition: all 0.3s ease-in-out;
-    width: 250px;
+    min-width: 250px;
     height: 60px;
 }
 
@@ -85,7 +92,8 @@ header {
 }
 
 .description {
-    max-width: 800px; 
+    max-width: 800px;
+    width: 90%;
     text-align: center; 
     background: linear-gradient(130deg,#6389D9, #65AAD9); 
     padding: 20px;
@@ -93,6 +101,7 @@ header {
     box-shadow: 0 0 15px 10px #bed8f9; 
     margin: 80px auto;
     color: white;
+    box-sizing: border-box;
 }
 
 .background-wrapper {
@@ -116,6 +125,7 @@ header {
     margin: 20px;
     padding: 20px;
     width: 300px;
+    min-height: 670px;
     text-align: center;
     border-radius: 40px;
     background: rgb(227, 230, 238);
@@ -123,9 +133,9 @@ header {
     border: 7px solid #6389D9;
     display: flex;
     flex-direction: column;
-    object-fit: cover;
-    height: auto;
-    min-height: 670px;
+    /*object-fit: cover;
+    height: auto;*/
+    
 }
 
 .team-member:hover {
@@ -142,6 +152,13 @@ header {
     padding: 0;
     margin: 0;
     color: rgb(50, 50, 50);
+}
+
+.team-member .content {
+    flex-grow: 1; /* Растягивает контент */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Чтобы список не раздвигал карточку */
 }
 
 .tasks {
@@ -161,6 +178,11 @@ header {
     transition: all 0.3s ease-in-out;
     list-style-position: inside;
     align-items: left;
+}
+
+.telegram,
+.number {
+    margin-top: auto;
 }
 
 .telegram-button {
@@ -256,3 +278,125 @@ header {
     }
 }*/
 
+/* Адаптация для мобильных */
+/*шапка*/
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+    
+    .logo__gaz {
+        padding: 50px 0;
+    }
+    
+    .logo__st img,
+    .logo__gaz img {
+        height: 40px;
+        max-width: 100px;
+    }
+    
+    .navigation__button {
+        font-size: 18px;
+        height: 40px;
+        min-width: 160px;
+        border-width: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo__st, .logo__gaz {
+        padding: 0 10px;
+    }
+    
+    .navigation__button {
+        font-size: 16px;
+        min-width: 140px;
+        padding: 0 15px;
+    }
+}
+
+/*описание*/
+/*планшеты*/
+@media (max-width: 768px) {
+    .description {
+        width: 90%;
+        margin: 50px auto 50px 55%;
+        transform: translateX(-2.2%);
+        padding: 15px;
+        border-radius: 30px;
+    }
+    
+    .description h1 {
+        font-size: 28px; /* Уменьшаем размер заголовка */
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 576px) {
+    .description {
+        margin-left: 8.3%;
+        width: 90%;
+        padding: 12px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 5px #bed8f9;
+    }
+    
+    .description h1 {
+        font-size: 22px;
+        line-height: 1.3; /* Улучшаем читаемость */
+        padding: 0 10px; /* Добавляем отступы по бокам */
+    }
+}
+
+/* Мобильная версия - карточки по одной */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column; /* Карточки в один столбец */
+        align-items: center; /* Центрирование карточек */
+    }
+    
+    .team-member {
+        width: 90%; /* Ширина почти на весь экран */
+        max-width: 350px; /* Максимальная ширина */
+        margin: 15px 30px; /* Отступы сверху/снизу и автоматические по бокам */
+        min-height: auto; /* Автоматическая высота */
+        padding: 15px;
+    }
+    
+    .team-member:hover {
+        transform: none; /* Убираем эффект наведения на мобильных */
+    }
+    
+    /* Оптимизация внутренних элементов */
+    .team-member img {
+        width: 60%; /* Уменьшаем фото */
+        max-width: 200px;
+    }
+    
+    .telegram,
+    .number {
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .telegram {
+        width: 50%;
+        margin-left: 18%;
+    }
+
+    .number {
+        width: 53%;
+    }
+
+    .telegram-button {
+        align-items: center;
+    }
+    .telegram-button img {
+        width: 25px;
+    }
+    .number img {
+        width:25px;
+    }
+}
