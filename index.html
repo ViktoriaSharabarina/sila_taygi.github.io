@@ -1,269 +1,282 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Сила Тайги: Команда</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление структурными подразделениями</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Для иконок (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="page">
 
-    <body>
-        <header>
-            <div class="logo">
-                <div class="logo__st">
-                    <img src="photo/st.jpg" alt="Логотип Силы Тайги">
-                </div>
-                <div class="logo__gaz">
-                    <img src="photo/газпром-391x329.jpg" alt="Логотип Газпрома">
-                </div>
+    <header class="header">
+        <div class="header__container">
+            <!-- Лого слева -->
+            <div class="header__logo header__logo--left">
+                <img src="photo/st.jpg" alt="Логотип" class="header__logo-img">
             </div>
-            <div class="navigation">
-                <a href="#about" target="_blank" class="navigation__button">
-                    <span>Наша команда</span>
-                </a> 
+            <nav class="header__nav">
+                <button class="header__nav-button">
+                    <a href="#team" target="_blank">
+                        О нас
+                    </a>
+                </button>
+                <button class="header__nav-button">
+                    <a href="#description" target="_blank">
+                        О нашем приложении
+                    </a>
+                </button>
+            </nav>
+            <!-- Лого справа -->
+            <div class="header__logo header__logo--right">
+                <img src="photo/gazz.jpg" alt="Логотип" class="header__logo-img">
             </div>
-        </header>
+        </div>
+    </header>
 
-        <div class="description">
-            <h1>
-                ИИ-конструктор - организационной структуры предприятия
-            </h1>
+    <!-- ТЕКСТОВЫЙ БЛОК -->
+    <section class="text-block">
+        <div class="text-block__rounded">
+            <!-- ВСТАВЬТЕ ТЕКСТ -->
+            <p>Разработка ИИ-конструктора организационной структуры предприятия</p>
+        </div>
+    </section>
+
+    <!-- ОПИСАНИЕ + ССЫЛКИ -->
+    <section id="description">
+        <div class="description__container">
+            <p>Веб-сайт <b>"Система управления персоналом"</b> - программное решение для автоматизации
+            управления структурными подразделениями, кадровыми ресурсами и внутренними запросами.
+            Функциональные возможности:
+            <ol>
+                <li>
+                    Конструктор организационной структуры
+                    <ul>
+                        <li>
+                            Построение трехуровневой иерархии (служба → отдел → группа)
+                        </li>
+                        <li>
+                            Функционал drag-and-drop для перераспределения сотрудников между подразделениями
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Система обработки запросов
+                    <ul>
+                        <li>
+                            Подача стандартизированных запросов (IT, HR, логистика)
+                        </li>
+                        <li>
+                            Автоматическая классификация и маршрутизация с точностью ≥75%
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Аналитический модуль
+                    <ul>
+                        <li>
+                            Формирование рекомендаций по распределению персонала на основе компетенций
+                        <li>
+                            Прогнозирование рабочей нагрузки структурных подразделений
+                    </ul>
+                </li>
+            </ol>
+            <p>При нажатии на каждый раздел, Вы увидите его описание и изображние :)</p>
+            </p>
+        
+            <div class="description__links">
+                <a href="#section1" class="description__link">Система управления персоналом</a> <p> </p>
+                <a href="#section2" class="description__link">Сотрудники</a><p> </p>
+                <a href="#section3" class="description__link">Отделы</a><p> </p>
+                <a href="#section4" class="description__link">ИИ-аналитика</a><p> </p>
+                <a href="#section5" class="description__link">Заявки</a><p> </p>
+                <a href="#section6" class="description__link">Настройки</a><p> </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДИНАМИЧЕСКИЙ БЛОК -->
+    <section class="dynamic-content">
+        <!-- Левая часть (текст) -->
+        <div class="dynamic-content__text">
+            <div class="dynamic-content__rounded">
+                <!-- смена текста через js -->
+                <p id="dynamic-text">Выберите раздел...</p>
+            </div>
         </div>
         
-        <section id="about">
-            <div class="background-wrapper">
-                <section class="team">
-                    <div class="team-member">
-                        <img src="photo/team/matthew-1x1.jpg" alt="Фотография matthew">
-                        <div class="team-member__role">
-                            <h3>Прохоров Матвей</h3>
-                            <p>Frontend-разработчик</p>
-                        </div>
-                        
-                            <ul class="tasks">
-                                <li>Разработка лендинга команды</li>
-                                <li>Создание telegram-бота</li>
-                            </ul>
-                    
-                        <div class="telegram">
-                            <a href="https://t.me/Itzmatic" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79832333500</span>
-                        </div>
-                    </div>
+        <!-- Правая часть (изображение) -->
+        <div class="dynamic-content__image">
+            <!-- смена изображения через js -->
+            <img id="dynamic-image" src="photo/our_site/1Панель управления.png" alt="Раздел">
+        </div>
+    </section>
 
-                    <div class="team-member">
-                        <img src="photo/team/vika-1x1.jpg" alt="Фотография vika">
-                        <div class="team-member__role">
-                            <h3>Шарабарина Виктория</h3>
-                            <p>Frontend-разработчик</p>
-                        </div>
-                            <ul class="tasks">
-                                <li>Разработка лендинга команды</li>
-                                <li>Вёрстка интерфейса</li>
-                            </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/blueheaven04" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79138724819</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/zahar-1x1 (1).jpg" alt="Фотография Захара Ратушного">
-                        <div class="team-member__role">
-                            <h3>Ратушный Захар</h3>
-                            <p>Frontend-разработчик</p>
-                        </div>
-                            <ul class="tasks">
-                                <li>Разработка лендинга команды</li>
-                                <li>Создание telegram-бота</li>
-                            </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/T0math" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79539286179</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/misha-1x1.jpg" alt="Фотография Mishi">
-                        <div class="team-member__role">
-                            <h3>Пасько Михаил</h3>
-                            <p>Искусственный интеллект</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Гений</li>
-                            <li>Плейбой</li>
-                            <li>Миллионер</li>
-                            <li>Филантроп</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/Mishgeun" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+Телефон</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/masha-1x1 (1).jpg" alt="#">
-                        <div class="team-member__role">
-                            <h3>Бобрикова Мария</h3>
-                            <p>Тестировщик</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Задача 1</li>
-                            <li>Задача 2</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/soymintlatte" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79116715548</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/sergey.jpg" alt="sergey">
-                        <div class="team-member__role">
-                            <h3>Дудник Сергей</h3>
-                            <p>Backend-разработчик</p>
-                        </div>
-                            <ul class="tasks">
-                            <li>Разработка архитектуры</li>
-                            <li>Разработка серверной части</li>
-                            <li>Организация команды</li>
-                            </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/money_alipay" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79521802881</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/kirill-1x1.jpg" alt="kirill">
-                        <div class="team-member__role">
-                            <h3>Вьюков Кирилл</h3>
-                            <p>Backend-разработчик</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Задача 1</li>
-                            <li>Задача 2</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/kivy_1" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79515965122</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/kirilll-1x1.jpg" alt="kirilll">
-                        <div class="team-member__role">
-                            <h3>Фроликов Кирилл</h3>
-                            <p>Искусственный интеллект</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Задача 1</li>
-                            <li>Задача 2</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/krlfrlkv" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79515873701</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/rus-1x1.jpg" alt="rus">
-                        <div class="team-member__role">
-                            <h3>Коваленко Руслан</h3>
-                            <p>Искусственный интеллект</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Задача 1</li>
-                            <li>Задача 2</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/greenSolarParrot" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79962057136</span>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img src="photo/team/ulker-1x1.jpg" alt="ulker">
-                        <div class="team-member__role">
-                            <h3>Джафарова Улькер</h3>
-                            <p>Backend-разработчик</p>
-                        </div>
-                        <ul class="tasks">
-                            <li>Задача 1</li>
-                            <li>Задача 2</li>
-                        </ul>
-                        <div class="telegram">
-                            <a href="https://t.me/Ulkerat" target="_blank" class="telegram-button">
-                                <img src="photo/tele.png" alt="Telegram">
-                                <span>Написать</span>
-                            </a>
-                        </div>
-                        <div class="number">
-                            <img src="photo/phone-call (1).png" class="phone">
-                            <span>+79138565441</span>
-                        </div>
-                    </div>
-                </section>
-                <!--<div class="footer-container"> 
-                    <div class="footer">
-                        <img src="photo/footer_photo.jpg" alt="Изображение">
-                    </div>
-                </div>-->
+    <!-- БЛОК "О НАС" -->
+    <section id="team">
+        <h2 class="team__title">Наша команда</h2>
+        <div class="team__cards">
+            <!-- Карточка 1 -->
+            <div class="team__card">
+                <img src="photo/team/matthew-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Прохоров Матвей</h3>
+                <p class="team__role"><i>Frontend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Разработка лендинга команды</li>
+                    <li>Создание telegram-бота</li>
+                </ul>
+                <a href="https://t.me/Itzmatic" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(983)-233-35-00
+                </div>
             </div>
-        </section>
-    </body>
+            <div class="team__card">
+                <img src="photo/team/vika-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Шарабарина Виктория</h3>
+                <p class="team__role"><i>Frontend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Главный разработчик лендинга</li>
+                    <li>Создание итоговой презентации</li>
+                </ul>
+                <a href="https://t.me/blueheaven04" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(913)-872-48-19
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/zahar-1x1 (1).jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Ратушный Захар</h3>
+                <p class="team__role"><i>Frontend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Разработка лендинга команды</li>
+                    <li>Создание telegram-бота</li>
+                </ul>
+                <a href="https://t.me/T0math" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(953)-928-61-79
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/misha-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Пасько Михаил</h3>
+                <p class="team__role"><i>Искусственный интеллект</i></p>
+                <ul class="team__tasks">
+                    <li>Разработка сайта приложения</li>
+                    <li>Создание telegram-бота</li>
+                </ul>
+                <a href="https://t.me/Mishgeun" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(913)-100-32-98
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/masha-1x1 (1).jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Бобрикова Мария</h3>
+                <p class="team__role"><i>Тестировщик</i></p>
+                <ul class="team__tasks">
+                    <li>Создание тестовой документации</li>
+                    <li>Ручное тестирование</li>
+                    <li>Создание гайдлайна для админа сайта</li>
+                </ul>
+                <a href="https://t.me/soymintlatte" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(911)-671-55-48
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/sergey.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Дудников Сергей</h3>
+                <p class="team__role"><i>Backend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Разработка архитектуры</li>
+                    <li>Разработка серверной части</li>
+                    <li>Организация команды</li>
+                </ul>
+                <a href="https://t.me/money_alipay" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(952)-180-28-81
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/kirill-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Вьюков Кирилл</h3>
+                <p class="team__role"><i>Backend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Создание ИИ для облегчённого поиска сотрудников в базе</li>
+                    <li>Разработка серверной части</li>
+                    <li></li>
+                </ul>
+                <a href="https://t.me/kivy_1" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(951)-596-51-22
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/kirilll-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Фроликов Кирилл</h3>
+                <p class="team__role"><i>Искусственный интеллект</i></p>
+                <ul class="team__tasks">
+                    <li>Создание NLP модели для обработки данных сотрудников</li>
+                    <li>Написание кода для перевода csv файла с данными о сотрудниках в json-формат </li>
+                    <li>Оценка точности модели NLP</li>
+                </ul>
+                <a href="https://t.me/krlfrlkv" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(951)-587-37-01
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/rus-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Коваленко Руслан</h3>
+                <p class="team__role"><i>Тестировщик</i></p>
+                <ul class="team__tasks">
+                    <li>Создание авто-тестов</li>
+                    <li>Составление баг-репортов</li>
+                </ul>
+                <a href="https://t.me/wildyellow" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(996)-205-71-36
+                </div>
+            </div>
+            <div class="team__card">
+                <img src="photo/team/ulker-1x1.jpg" alt="Сотрудник" class="team__photo">
+                <h3 class="team__name">Джафарова Улькер</h3>
+                <p class="team__role"><i>Backend-разработчик</i></p>
+                <ul class="team__tasks">
+                    <li>Backend-разработка сайта</li>
+                    <li>Работа с Docker и fastAPI</li>
+                </ul>
+                <a href="https://t.me/Ulkerat" class="team__button">
+                    <i class="fab fa-telegram"></i> Телеграмм
+                </a>
+                <div class="team__button">
+                    <i class="fas fa-phone"></i> +7-(913)-856-54-41
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="scripts/script.js"></script>
+</body>
 </html>
