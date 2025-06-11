@@ -1,8 +1,8 @@
-console.log("Скрипт подключен!"); // Должно появиться в консоли
+console.log("Скрипт подключен!"); 
 
 document.querySelectorAll('.description__link').forEach(link => {
     link.addEventListener('click', function() {
-        console.log("Клик на ссылку:", this.textContent); // Проверка кликов
+        console.log("Клик на ссылку:", this.textContent); 
     });
 });
 
@@ -37,7 +37,6 @@ window.sectionsData = {
         text: 'Данный раздел позволяет управлять настройками профиля и системы',
         image: 'photo/our_site/6Настройки.png'
     }
-            // Добавьте остальные разделы
 }
 
 document.querySelectorAll('.description__link').forEach(link => {
