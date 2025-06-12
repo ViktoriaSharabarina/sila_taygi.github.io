@@ -95,7 +95,6 @@ body {
 #description {
     background: linear-gradient(0deg, var(--light-blue), var(--blue));
     padding: 70px 10%;
-    /*width: 100%;*/
     text-align: justify;
 }
 
@@ -113,14 +112,14 @@ body {
 }
 
 #description ul {
-    margin: 15px 0; /* Отступ сверху и снизу всего списка */
-    padding-left: 30px; /* Отступ для маркеров */
+    margin: 15px 0;
+    padding-left: 30px; 
     background-color: var(--white);
 }
 
 #description li {
-    margin-bottom: 10px; /* Расстояние между пунктами */
-    line-height: 1.5; /* Межстрочный интервал */
+    margin-bottom: 10px; 
+    line-height: 1.5; 
     background-color: var(--white);
 }
 
@@ -167,7 +166,6 @@ body {
     padding: 30px;
     background: var(--white);
     color: var(--dark-gray);
-    /*border: 8px solid var(--light-blue);*/
     border-radius: 80px;
     box-shadow: 0 0 20px 15px var(--white);
     text-align: center;
@@ -259,8 +257,8 @@ body {
 }
 
 .team__button li {
-    margin-bottom: 3px; /* Расстояние между пунктами */
-    line-height: 1.3; /* Межстрочный интервал */
+    margin-bottom: 3px; 
+    line-height: 1.3; 
 }
 
 
@@ -279,13 +277,13 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Анимация для изображения */
+
 .dynamic-content__image {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Стили для "исчезновения" при переключении */
+
 .hidden {
     opacity: 0;
-    transform: translateY(10px); /* Лёгкий сдвиг вниз */
+    transform: translateY(10px); 
 }
